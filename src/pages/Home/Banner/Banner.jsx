@@ -35,19 +35,19 @@ const Banner = ({ isMenuOpen }) => {
           videoLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
           Elevate Your Business with Stunning Digital Solutions
         </h2>
-        <div className="mt-8 flex justify-center gap-6">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <a
             href="#services"
-            className="bg-red-500 text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300 hover:bg-red-600 transform hover:scale-105"
+            className="bg-red-500 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-full text-sm sm:text-lg font-semibold transition duration-300 hover:bg-red-600 transform hover:scale-105"
           >
             Discover Our Services
           </a>
           <a
             href="#contact"
-            className="bg-transparent border-2 border-white text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300 hover:bg-white hover:text-gray-800 transform hover:scale-105"
+            className="bg-transparent border-2 border-white text-white py-2 px-4 sm:py-3 sm:px-6 rounded-full text-sm sm:text-lg font-semibold transition duration-300 hover:bg-white hover:text-gray-800 transform hover:scale-105"
           >
             Get In Touch
           </a>

@@ -9,11 +9,7 @@ const NavBar = () => {
 
   // Prevent background scrolling when menu is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -50,9 +46,9 @@ const NavBar = () => {
             ))}
           </ul>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle Button */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="md:hidden text-white focus:outline-none transition-transform duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -83,7 +79,7 @@ const NavBar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-lg text-white hover:text-red-400 transition duration-300"
+                className="text-lg text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-red-500 hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
