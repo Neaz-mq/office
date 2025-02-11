@@ -7,7 +7,7 @@ const About = () => {
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl font-bold text-center mb-12"
         >
@@ -19,7 +19,7 @@ const About = () => {
           {/* Left Side - Description */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             className="flex flex-col justify-center"
           >
@@ -42,7 +42,7 @@ const About = () => {
           {/* Right Side - Image or Team Photo */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             className="flex justify-center items-center"
           >
@@ -57,16 +57,18 @@ const About = () => {
         {/* Values Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mt-20 text-center"
         >
-          <h3 className="text-3xl sm:text-4xl font-semibold mb-8">Our Core Values</h3>
+          <h3 className="text-3xl sm:text-4xl font-semibold mb-8">
+            Our Core Values
+          </h3>
           <div className="flex flex-wrap justify-center gap-12">
             <div className="w-full sm:w-1/3">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
@@ -80,7 +82,7 @@ const About = () => {
             <div className="w-full sm:w-1/3">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
@@ -94,7 +96,7 @@ const About = () => {
             <div className="w-full sm:w-1/3">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
