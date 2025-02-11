@@ -46,12 +46,12 @@ const NavBar = () => {
             ))}
           </ul>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle Button (Only Menu Icon) */}
           <button
             className="md:hidden text-white focus:outline-none transition-transform duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            <Menu size={28} />
           </button>
         </div>
       </nav>

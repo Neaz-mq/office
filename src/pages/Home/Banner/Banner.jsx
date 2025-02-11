@@ -5,7 +5,7 @@ const Banner = ({ isMenuOpen }) => {
 
   return (
     <div
-      className={`relative w-full h-screen flex items-center justify-center text-center transition-opacity duration-300 ${
+      className={`relative w-full h-screen flex items-center justify-center text-center transition-opacity duration-200 ${
         isMenuOpen ? "pointer-events-none opacity-50" : "opacity-100"
       }`}
     >
@@ -31,7 +31,7 @@ const Banner = ({ isMenuOpen }) => {
 
       {/* Content */}
       <div
-        className={`relative z-20 transition-opacity duration-700 ${
+        className={`relative z-20 transition-opacity duration-300 ${
           videoLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
