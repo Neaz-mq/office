@@ -9,16 +9,17 @@ const projects = [
     },
     {
         id: 2,
-        title: "Food order website",
-        category: "Web Design",
-        image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1739339258/Food-Buzz_urisga.png",
-    },
-    {
-        id: 3,
         title: "Template Selling Platform",
         category: "Web Development",
         image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1739339367/Prographr-Home_gpbcw9.png",
     },
+    {
+        id: 3,
+        title: "Food order website",
+        category: "Web Design",
+        image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1739339258/Food-Buzz_urisga.png",
+    },
+  
 ];
 
 const Portfolio = () => {
