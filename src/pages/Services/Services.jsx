@@ -130,7 +130,7 @@ const Services = () => {
   }, [isLargeScreen]);
 
   return (
-    <section className="relative py-20 bg-gray-900 text-white">
+    <section id="services" className="relative py-24 bg-gray-900 text-white">
       {/* Canvas for floating particle animation (only on screens larger than 1900px) */}
       {isLargeScreen && <canvas id="floatingParticlesCanvas" className="absolute inset-0 z-0"></canvas>}
 

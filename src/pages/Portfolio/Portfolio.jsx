@@ -73,7 +73,7 @@ const projects = [
 
 const Portfolio = () => {
     return (
-        <section className="relative py-20 bg-gray-800 text-white">
+        <section id="portfolio" className="relative py-24 bg-gray-800 text-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Heading */}
                 <motion.h2

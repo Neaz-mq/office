@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { HashLink } from 'react-router-hash-link';  // Import HashLink for smooth scrolling
 import logo from "/logo.webp";
 import Banner from "../../Home/Banner/Banner";
 
@@ -19,8 +20,8 @@ const NavBar = () => {
     <>
       <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-black via-gray-800 to-black text-white px-6 py-4 shadow-xl z-[100] backdrop-blur-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Logo */}
-          <a href="/" className="flex items-center space-x-3">
+          {/* Logo (reload page when clicked) */}
+          <button onClick={() => window.location.href = '/'} className="flex items-center space-x-3">
             <img
               src={logo}
               alt="Craftcode Logo"
@@ -29,19 +30,32 @@ const NavBar = () => {
             <span className="text-xl font-bold tracking-wider uppercase hover:text-red-400 transition duration-300">
               Craftcode
             </span>
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex gap-8 text-lg font-semibold">
             {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
               <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="relative text-white hover:text-red-400 transition duration-300 group"
-                >
-                  {item}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                {item === "Home" ? (
+                  // Home link will reload the page
+                  <button
+                    onClick={() => window.location.href = '/'}
+                    className="relative text-white hover:text-red-400 transition duration-300 group"
+                  >
+                    {item}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  </button>
+                ) : (
+                  // Other items will scroll to section
+                  <HashLink
+                    smooth
+                    to={`#${item.toLowerCase()}`}
+                    className="relative text-white hover:text-red-400 transition duration-300 group"
+                  >
+                    {item}
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                  </HashLink>
+                )}
               </li>
             ))}
           </ul>
@@ -76,14 +90,27 @@ const NavBar = () => {
 
             {/* Menu Items */}
             {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-lg text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-red-500 hover:text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                {item}
-              </a>
+              <li key={item}>
+                {item === "Home" ? (
+                  // Home link will reload the page
+                  <button
+                    onClick={() => window.location.href = '/'}
+                    className="text-lg text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-red-500 hover:text-white"
+                  >
+                    {item}
+                  </button>
+                ) : (
+                  // Other items will scroll to section
+                  <HashLink
+                    smooth
+                    to={`#${item.toLowerCase()}`}
+                    className="text-lg text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-red-500 hover:text-white"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item}
+                  </HashLink>
+                )}
+              </li>
             ))}
           </motion.div>
         )}
