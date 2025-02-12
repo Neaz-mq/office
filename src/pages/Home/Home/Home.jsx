@@ -1,12 +1,12 @@
 import About from "../../About/About";
-import Services from "../../Services/Services";
+// import Services from "../../Services/Services";
 
 
 const Home = () => {
     return (
         <div>
             <About></About>
-            <Services></Services>
+            {/* <Services></Services> */}
         </div>
     );
 };

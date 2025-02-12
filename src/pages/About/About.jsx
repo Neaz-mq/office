@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative py-20 bg-gray-800 text-white">
+    <section className="relative py-20 bg-gray-800 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl font-bold text-center mb-12"
         >
@@ -15,49 +16,51 @@ const About = () => {
         </motion.h2>
 
         {/* About Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Side - Description */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7 }}
             className="flex flex-col justify-center"
           >
             <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
               We Are Craftcode – A Digital Agency
             </h3>
-            <p className="text-lg sm:text-xl mb-6">
+            <p className="text-lg sm:text-xl mb-6 leading-relaxed">
               At Craftcode, we specialize in delivering innovative digital
               solutions that help businesses grow. Our team of creative and
               skilled professionals works closely with clients to bring their
-              ideas to life through high-quality web design, digital marketing,
-              and branding strategies.
+              ideas to life through high-quality web design, branding, and development.
             </p>
-            <p className="text-lg sm:text-xl mb-6">
+            <p className="text-lg sm:text-xl mb-6 leading-relaxed">
               We believe in collaboration, transparency, and delivering results
               that exceed expectations.
             </p>
           </motion.div>
 
-          {/* Right Side - Image or Team Photo */}
+          {/* Right Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7 }}
             className="flex justify-center items-center"
           >
             <img
               src="/Team.jpg"
               alt="Team Photo"
-              className="rounded-lg shadow-xl w-full max-w-md"
+              className="rounded-lg shadow-xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             />
           </motion.div>
         </div>
 
-        {/* Values Section */}
+        {/* Core Values Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
           className="mt-20 text-center"
         >
@@ -69,6 +72,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
@@ -83,6 +87,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
@@ -97,6 +102,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
                 className="p-8 bg-gray-700 rounded-lg shadow-xl hover:scale-105 transform transition duration-300"
               >
