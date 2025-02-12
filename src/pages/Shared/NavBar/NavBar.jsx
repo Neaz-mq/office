@@ -64,7 +64,7 @@ const NavBar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 w-1/3 h-auto bg-black bg-opacity-95 p-4 flex flex-col items-center space-y-6 md:hidden z-[999]"
+            className="fixed top-0 right-0 w-1/3 h-auto bg-black bg-opacity-95 p-8 flex flex-col items-center space-y-2 md:hidden z-[999]"
           >
             {/* Close Button */}
             <button
