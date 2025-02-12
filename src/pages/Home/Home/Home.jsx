@@ -1,4 +1,5 @@
 import About from "../../About/About";
+import Portfolio from "../../Portfolio/Portfolio";
 import Services from "../../Services/Services";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <About></About>
             <Services></Services>
+            <Portfolio></Portfolio>
         </div>
     );
 };
