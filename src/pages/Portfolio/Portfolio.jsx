@@ -5,19 +5,19 @@ const projects = [
         id: 1,
         title: "Creative Design",
         category: "Graphic Design",
-        image: "/portfolio1.jpg",
+        image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1729501595/2_svqkng.jpg",
     },
     {
         id: 2,
         title: "Food order website",
         category: "Web Design",
-        image: "/portfolio2.jpg",
+        image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1739339258/Food-Buzz_urisga.png",
     },
     {
         id: 3,
-        title: "E-commerce Platform",
+        title: "Template Selling Platform",
         category: "Web Development",
-        image: "/portfolio3.jpg",
+        image: "https://res.cloudinary.com/dzi3u164c/image/upload/v1739339367/Prographr-Home_gpbcw9.png",
     },
 ];
 
