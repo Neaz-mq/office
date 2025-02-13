@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CTA = () => {
     return (
-        <section className="relative bg-gray-800 text-white py-20 px-6 lg:px-20 text-center overflow-hidden">
+        <section  className="relative bg-gray-800 text-white py-20 px-6 lg:px-20 text-center overflow-hidden">
             {/* Animated Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 opacity-50"></div>
 
@@ -38,7 +38,7 @@ const CTA = () => {
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <Link
-                        to="/contact"
+                        to="https://prographr.com/contact"
                         className="bg-blue-500 text-white font-semibold px-8 py-4 rounded-full shadow-lg transform hover:scale-105 hover:shadow-xl transition-all duration-300"
                     >
                         Get a Free Quote
