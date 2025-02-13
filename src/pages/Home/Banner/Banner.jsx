@@ -17,6 +17,7 @@ const Banner = ({ isMenuOpen }) => {
           muted
           loop
           playsInline
+          preload="auto" // This preloads the video
           onLoadedData={() => setVideoLoaded(true)}
         >
           <source
